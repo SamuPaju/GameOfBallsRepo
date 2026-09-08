@@ -693,7 +693,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4412741816707423571, guid: 853a87fe2d0e75c48bbfc68010438033, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.16
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 4412741816707423571, guid: 853a87fe2d0e75c48bbfc68010438033, type: 3}
       propertyPath: m_LocalPosition.y
@@ -957,10 +957,13 @@ MonoBehaviour:
     m_TextClipping: 0
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
+    m_ContentSpacing: 1
     m_FixedWidth: 0
     m_FixedHeight: 0
+    m_ImageIsTopAligned: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+    m_IsSDF: 0
 --- !u!54 &1237374262
 Rigidbody:
   m_ObjectHideFlags: 0
