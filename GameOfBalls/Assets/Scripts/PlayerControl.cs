@@ -5,11 +5,13 @@ public class PlayerControl : MonoBehaviour
 {
     public float force;
     public Rigidbody playerRB;
+    public Color oldColor;
 
     public float health;
     public float highPoint;
     public bool goingDown;
     public float damage;
+    public bool playercolor;
 
     Vector3 startPos;
 
@@ -21,6 +23,7 @@ public class PlayerControl : MonoBehaviour
     {
         myStyle.normal.textColor = Color.white;
         myStyle.fontSize = 26;
+        oldColor = GetComponent<MeshRenderer>().material.color;
 
         startPos = transform.position;
     }
@@ -43,6 +46,19 @@ public class PlayerControl : MonoBehaviour
             }
 
             Launch(force, dir);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (playercolor)
+            {
+                GetComponent<MeshRenderer>().material.color = Color.purple;
+            }
+            else
+            {
+                GetComponent<MeshRenderer>().material.color = oldColor;
+            }
+            playercolor = !playercolor;
         }
 
         // Tarkastetaan joka frame onko pallo alkanut menemään alaspäin.
